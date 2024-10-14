@@ -1,10 +1,3 @@
-# =============================================================================================
-# DeepFinder - a deep learning approach to localize macromolecules in cryo electron tomograms
-# =============================================================================================
-# Copyright (C) Inria,  Emmanuel Moebel, Charles Kervrann, All Rights Reserved, 2015-2021, v1.0
-# License: GPL v3.0. See <https://www.gnu.org/licenses/>
-# =============================================================================================
-
 import os
 import numpy as np
 import h5py
@@ -24,13 +17,6 @@ import matplotlib.pyplot as plt
 
 from PIL import Image # for reading tif
 
-# Writes an image file containing ortho-slices of the input volume. Generates same visualization as matlab function
-# 'tom_volxyz' from TOM toolbox.
-# If volume type is int8, the function assumes that the volume is a labelmap, and hence plots in color scale.
-# Else, it assumes that the volume is tomographic data, and plots in gray scale.
-# INPUTS:
-#   vol     : 3D numpy array
-#   filename: string '/path/to/file.png'
 def plot_volume_orthoslices(vol, filename):
     """Writes an image file containing ortho-slices of the input volume. Generates same visualization as matlab function
     'tom_volxyz' from TOM toolbox.
@@ -68,23 +54,13 @@ def plot_volume_orthoslices(vol, filename):
         plt.imshow(img_array, cmap='gray', vmin=mu-5*sig, vmax=mu+5*sig)
     fig.savefig(filename)
 
-# Reads data stored in h5 file, from specified h5 dataset.
-# INPUTS:
-#   filename : string '/path/to/file.h5'
-#   dset_name: string dataset name
-# OUTPUT:
-#   dataArray: numpy array
+
 def read_h5array(filename, dset_name='dataset'):
     h5file = h5py.File(filename, 'r')
     dataArray = h5file[dset_name][:]
     h5file.close()
     return dataArray
 
-# Writes data in h5 file, to specified h5 dataset. Is also adapted for labelmaps: saved as int8 to gain disk space.
-# INPUTS:
-#   array    : numpy array
-#   filename : string '/path/to/file.h5'
-#   dset_name: string dataset name
 def write_h5array(array, filename, dset_name='dataset'):
     h5file = h5py.File(filename, 'w')
     if array.dtype == np.int8:
@@ -160,33 +136,6 @@ def read_png(filename):
         print(f"Error reading PNG file: {e}")
         return None
 
-# Reads arrays. Handles .h5 and .mrc files, according to what extension the file has.
-# INPUTS:
-#   filename : string '/path/to/file.ext' with '.ext' either '.h5' or '.mrc'
-#   dset_name: string h5 dataset name. Not necessary to specify when reading .mrc
-# OUTPUT:
-#   array: numpy array
-# def read_array(filename, dset_name='dataset'):
-#     """Reads arrays. Handles .h5 and .mrc files, according to what extension the file has.
-#
-#     Args:
-#         filename (str): '/path/to/file.ext' with '.ext' either '.h5' or '.mrc'
-#         dset_name (str, optional): h5 dataset name. Not necessary to specify when reading .mrc
-#
-#     Returns:
-#         numpy array
-#     """
-#     data_format = os.path.splitext(filename)
-#     if data_format[1] == '.h5':
-#         array = read_h5array(filename, dset_name)
-#     elif data_format[1] == '.mrc' or data_format[1] == '.map' or data_format[1] == '.rec':
-#         array = read_mrc(filename)
-#     elif data_format[1] == '.tif' or data_format[1] == '.TIF':
-#         array = read_tif(filename)
-#     else:
-#         print('/!\ DeepFinder can only read datasets in .h5 and .mrc formats')
-#     return array
-
 
 def read_array(filename, dset_name='dataset'):
     """Read arrays from files and folders. Supports .h5, .mrc, .tif, and .png files.
@@ -199,7 +148,6 @@ def read_array(filename, dset_name='dataset'):
         List of NumPy arrays if the input is a folder, or a single NumPy array if it's a file.
     """
     if os.path.isdir(filename):
-        # 如果路径是一个文件夹，则读取文件夹内的所有文件。
         files = [os.path.join(filename, f) for f in os.listdir(filename)]
         arrays = []
         for file in files:
