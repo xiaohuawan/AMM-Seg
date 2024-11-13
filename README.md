@@ -84,8 +84,8 @@ pip install -r requirements.txt
 - Create Symbolic Links
 
     ```shell
-    ln -s /root/node-v18.20.3-linux-x64/bin/node /usr/local/bin/node
-    ln -s /root/node-v18.20.3-linux-x64/bin/npm /usr/local/bin/npm
+    ln -s /root/node-v18.17.1-linux-x64/bin/node /usr/local/bin/node
+    ln -s /root/node-v18.17.1-linux-x64/bin/npm /usr/local/bin/npm
 
     ```
 - Edit the Environment Configuration File
