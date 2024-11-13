@@ -40,9 +40,9 @@ pip install -r requirements.txt
 
 ## <a name="pretrained_models"></a>:dna:Pretrained Models
 
-| Model Name | Description |  Quark Cloud Disk |  
-| :---------: | :----------: | :----------: |
-| patient1.ckpt | AMM-Seg trained on patient1  | [download](https://pan.quark.cn/s/5f233e1f1c78)<br>(pwd: xdJe) |
+| Model Name | Description | Quark Cloud Disk | Google Cloud Disk | 
+| :---------: | :----------: | :----------: | :----------: |
+| patient1 | [download](https://pan.quark.cn/s/a42ead7affe3)<br>(pwd: p8FQ) | [download](https://drive.google.com/drive/folders/1bPkDxMU8nW0xIE1LyLdTCyvABHjfkNHq?usp=drive_link) | 
 | patient2.ckpt | AMM-Seg trained on patient2 | [download](https://pan.quark.cn/s/273efdbd0429)<br>(pwd: L82x) |
 | patient3.ckpt | AMM-Seg trained on patient3 | [download](https://pan.quark.cn/s/b00e1a8fc24e)<br>(pwd: kpdH) |
 | classification.pt | model for evaluating classification | [download](https://pan.quark.cn/s/0ae19c46bb04)<br>(pwd: 7MeU) |
