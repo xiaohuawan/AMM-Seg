@@ -77,7 +77,9 @@ pip install -r requirements.txt
 ## <a name="Usage"></a>📽️:GUI
 
   The system is divided into four main sections: classification assessment, image segmentation, precise calculation. 
+  
 1.Configuration
+
 - Download Node.js 18.17.1 and npm 9.6.7
 - Create Symbolic Links
 
