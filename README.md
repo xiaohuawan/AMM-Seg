@@ -32,20 +32,20 @@ pip install -r requirements.txt
 
 ## <a name="segmentation_data"></a>ℹ️Dataset
 
-| Dataset Name | Quark Cloud Disk |
-| :---------: | :----------: |
-| patient1 | [download](https://pan.quark.cn/s/a42ead7affe3)<br>(pwd: p8FQ) |
-| patient2 | [download](https://pan.quark.cn/s/88b45e11fc11)<br>(pwd: dR3a) |
-| patient3 | [download](https://pan.quark.cn/s/0153311a7b18)<br>(pwd: KP3P) |
+| Dataset Name | Quark Cloud Disk | Google Cloud Disk |
+| :---------: | :----------: | :----------: |
+| patient1 | [download](https://pan.quark.cn/s/a42ead7affe3)<br>(pwd: p8FQ) | [download](https://drive.google.com/drive/folders/1bPkDxMU8nW0xIE1LyLdTCyvABHjfkNHq?usp=drive_link) | 
+| patient2 | [download](https://pan.quark.cn/s/88b45e11fc11)<br>(pwd: dR3a) | [download](https://drive.google.com/drive/folders/1t5eYnyOY06gwRo-xQdVn-rOXE_P-K4N4?usp=drive_link) |
+| patient3 | [download](https://pan.quark.cn/s/0153311a7b18)<br>(pwd: KP3P) | [download](https://drive.google.com/drive/folders/1zyUfF5EDRAMEm78bgWoQHL31krvavqC6?usp=drive_link) |
 
 ## <a name="pretrained_models"></a>:dna:Pretrained Models
 
-| Model Name | Description | Quark Cloud Disk | Google Cloud Disk | 
+| Model Name | Description |  Quark Cloud Disk | Google Cloud Disk |  
 | :---------: | :----------: | :----------: | :----------: |
-| patient1 | AMM-Seg trained on patient1  | [download](https://pan.quark.cn/s/a42ead7affe3)<br>(pwd: p8FQ) | [download](https://drive.google.com/drive/folders/1bPkDxMU8nW0xIE1LyLdTCyvABHjfkNHq?usp=drive_link) | 
-| patient2.ckpt | AMM-Seg trained on patient2 | [download](https://pan.quark.cn/s/273efdbd0429)<br>(pwd: L82x) |
-| patient3.ckpt | AMM-Seg trained on patient3 | [download](https://pan.quark.cn/s/b00e1a8fc24e)<br>(pwd: kpdH) |
-| classification.pt | model for evaluating classification | [download](https://pan.quark.cn/s/0ae19c46bb04)<br>(pwd: 7MeU) |
+| patient1.ckpt | AMM-Seg trained on patient1  | [download](https://pan.quark.cn/s/5f233e1f1c78)<br>(pwd: xdJe) | [download](https://drive.google.com/file/d/1qtjoYP_fgBqAlzwT7f4V4NSbFhfkoHaS/view?usp=drive_link) |
+| patient2.ckpt | AMM-Seg trained on patient2 | [download](https://pan.quark.cn/s/273efdbd0429)<br>(pwd: L82x) | [download](https://drive.google.com/file/d/1vyqp5L1Xc1s7IMkUx58HNsmvt67TJ5Zt/view?usp=drive_link) |
+| patient3.ckpt | AMM-Seg trained on patient3 | [download](https://pan.quark.cn/s/b00e1a8fc24e)<br>(pwd: kpdH) | [download](https://drive.google.com/file/d/1f5-q3rx9PDeAmgErk4YMnRopuq4pHJif/view?usp=drive_link) |
+| classification.pt | model for evaluating classification | [download](https://pan.quark.cn/s/0ae19c46bb04)<br>(pwd: 7MeU) | [download](https://drive.google.com/file/d/1WJ_3EXh0RcMn1LyFHTq7W3Y9vw2hBU5x/view?usp=drive_link) |
 
 ## <a name="inference"></a>:crossed_swords:Inference
     
@@ -105,7 +105,7 @@ pip install -r requirements.txt
     </em>
 </p>
 
-- For detailed usage instructions, please refer to the user manual.
+- For detailed usage instructions, please refer to the user manual.[User manual](/src/config/patient1_config.yaml)
 
 ## Citation
 
