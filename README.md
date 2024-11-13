@@ -77,8 +77,31 @@ pip install -r requirements.txt
 ## <a name="Usage"></a>📽️:GUI
 
   The system is divided into four main sections: classification assessment, image segmentation, precise calculation. 
+1.Configuration
+- Download Node.js 18.17.1 and npm 9.6.7
+- Create Symbolic Links
 
-1.Usage
+    ```shell
+    ln -s /root/node-v18.20.3-linux-x64/bin/node /usr/local/bin/node
+    ln -s /root/node-v18.20.3-linux-x64/bin/npm /usr/local/bin/npm
+
+    ```
+- Edit the Environment Configuration File
+
+    ```shell
+    export NODEJS_HOME=/usr/local/lib/node/nodejs 
+    export PATH=$NODEJS_HOME/bin:$PATH
+
+    ```
+-  Verify the Installation
+
+    ```shell
+        node -v
+        npm -v
+
+    ```
+
+2.Usage
 
 - First, open an Administrator Command Prompt and use the `cd` command to navigate to the `AMM-Seg/vite/` directory of your project. Then, type `npm start` to run the project. This will open a browser and navigate to [http://localhost:3000/free](http://localhost:3000/free).
 
